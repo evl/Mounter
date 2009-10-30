@@ -1,0 +1,11 @@
+Simple mounting addon
+
+h2. Usage
+
+Make a macro containing the following command:
+
+@/mounter <Grount mount>[, <Flying mount>]@
+
+h2. Example
+
+@/mounter Black War Wolf, Red Proto Drake@
