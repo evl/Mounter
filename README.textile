@@ -4,7 +4,7 @@ h2. Usage
 
 Make a macro containing the following command:
 
-@/mounter <Grount mount>[, <Flying mount>]@
+@/mounter <Ground mount>[, <Flying mount>]@
 
 h2. Example
 

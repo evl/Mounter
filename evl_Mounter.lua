@@ -28,21 +28,21 @@ local argumentsPattern = "([^,]+),%s*(.+)"
 
 SlashCmdList['EVL_MOUNTER'] = function(text, editBox)
 	if not IsMounted() and not InCombatLockdown() then
-		local grountMount, flyingMount = string.match(text, argumentsPattern)
+		local groundMount, flyingMount = string.match(text, argumentsPattern)
 		
-		if not grountMount then
-			grountMount = #text > 0 and text or nil
+		if not groundMount then
+			groundMount = #text > 0 and text or nil
 		end
 		
-		if grountMount then
-			local mount = (flyingMount and IsFlyableArea() and not inFlyableWintergrasp()) and flyingMount or grountMount
+		if groundMount then
+			local mount = (flyingMount and IsFlyableArea() and not inFlyableWintergrasp()) and flyingMount or groundMount
 			local success = mountCreatureName(mount)
 			
 			if not success then
 				print("No such mount: " .. mount)
 			end
 		else
-			print("Usage: /mounter <Grount mount>[, <Flying mount>]")
+			print("Usage: /mounter <Ground mount>[, <Flying mount>]")
 		end
 	else
 		Dismount()
